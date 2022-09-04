@@ -1,0 +1,83 @@
+{
+    "Certificates":[
+        {
+            "key": "0",
+            "img": "../img/certificates/1.png"
+        },
+        {
+            "key": "1",
+            "img": "../img/certificates/2.png"
+        },
+        {
+            "key": "2",
+            "img": "../img/certificates/3.png"
+        },
+        {
+            "key": "3",
+            "img": "../img/certificates/4.png"
+        },
+        {
+            "key": "4",
+            "img": "../img/certificates/5.png"
+        }
+    ],
+    "Experience":[
+        {
+            "key": "exp1",
+            "img": "../img/logo/ODA.png",
+            "title": "Admin Instagram ODA Dental Clinic (2022 July)",
+            "location" : "Work From Home",
+            "job": [
+                "Fast Learner",
+                "Fast Response",
+                "Customer Service"
+            ]
+        },
+        {
+            "key": "exp2",
+            "img": "../img/logo/shopee.png",
+            "title": "TL ManPower Packing Shopee (2022 Mei)",
+            "location" : "Pasific Century Place Jakarta Selatan",
+            "job": [
+                "Coordinate the team",
+                "Reporting",
+                "Helping Other",
+                "Analyze processes and results"
+            ]
+        },
+        {
+            "key": "exp3",
+            "img": "../img/logo/shopee.png",
+            "title": "ManPower Packing Shopee (2021 December)",
+            "location" : "Pakuwon Tower Jakarta Selatan",
+            "job": [
+                "Make sure the item is good",
+                "Wrapping the hampers",
+                "Organize items"
+            ]
+        },
+        {
+            "key": "exp4",
+            "img": "../img/logo/shopee.png",
+            "title": "ManPower Packing Shopee (2021 June)",
+            "location" : "Pasific Century Place Jakarta Selatan",
+            "job": [
+                "Make sure the item is good",
+                "Wrapping the hampers",
+                "Organize items",
+                "Decorate with ribbon"
+            ]
+        },
+        {
+            "key": "exp5",
+            "img": "../img/logo/XXI.png",
+            "title": "Waiter Ayat Ayat Cinta 2 (2017 December)",
+            "location" : "Epicentrum Kuningan Jakarta Selatan",
+            "job": [
+                "Cleaning cutlery",
+                "Organize items",
+                "Complete guest need"
+            ]
+        }
+    ]
+}

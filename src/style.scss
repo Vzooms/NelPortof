@@ -1,0 +1,589 @@
+$biruMuda : rgb(142, 202, 230);
+$biruSedang : rgb(33, 158, 188);
+$biruTua : rgb(2, 48, 71);
+$kuning : rgb(255, 183, 3);
+$orange : rgb(251, 133, 0);
+
+$screenTablet : 'min-width : 768px) and (max-width : 1023px';
+$screenDekstop : 'min-width : 1024px';
+
+@media screen and ($screenDekstop) {
+    #sideBar{
+        width: 2vw !important;
+        a{
+            width: 2vw !important;  
+        }
+        img{
+            padding: 0px !important;
+            width: 1.5vw !important;
+        }
+    }
+
+    #home{
+        #homeMain{
+            h4{
+                font-size: 40px !important;
+            }
+            h1{
+                font-size: 150px;
+            }
+            a{
+                button{
+                    width: 10vw;
+                }
+                img{
+                    width: 2vw !important;
+                }
+            }
+        }
+    }
+    #aboutMe{
+        main{
+            flex-direction: row-reverse !important;
+            #profile{
+                width: 20vw !important;
+            }
+            #aboutMeText{
+                width: 60% !important;
+                h2, p {
+                    text-align: left !important;
+                }
+                #logo{
+                    img{
+                        width: 5vw !important;
+                    }
+                }
+            }
+        }
+    }
+    #portofolio{
+        #bg{
+            #realImage{
+                width: 50vw !important;
+            }
+            img{
+                width: 5vw !important;
+            }
+        }
+        main{
+            #experience-wrapper{
+                #experienceAll{
+                    width: 110vw !important;
+                    .experienceText{
+                        width: 20vw !important;
+                        padding: 1vw !important;
+                        img{
+                            width: 5vw !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #contactUs{
+        main{
+            height: auto !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            form{
+                width: 70%;
+                font-size: 1vw !important;
+            }
+            #socialMedia-wrapper{
+                flex-direction: column;
+                align-items: flex-start !important;
+                .socialMedia{
+                    .socialMediaText{
+                        display: flex;
+                        padding: 1vw;
+                        font-size: 1.2vw;
+                    }
+                    img{
+                        padding: 1vw;
+                        width: 6vw;
+                    }
+                }
+            }
+        }  
+    }
+}
+
+@media screen and ($screenTablet) {
+    #aboutMe{
+        main{
+            #profile{
+                width: 30vw !important;  
+            }
+        }
+    }
+    #portofolio{
+        main{
+            #experience{
+                #experience-wrapper{
+                    #experienceAll{
+                        width: 270vw !important;
+                        .experienceText{
+                            width: 50vw !important;
+                            padding: 1vw !important;
+                            img{
+                                padding: 1vw !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: primary;
+    src: url(./font/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: secondary;
+    src: url(./font/Arimo-VariableFont_wght.ttf);
+}
+
+@keyframes bigger {
+    0%{
+        transform: scale(1);
+    }
+    // 20%{
+    // }
+    50%{
+        
+        transform: scale(1.2);
+    // }80%{
+    //     transform: scale(1.5);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes movingArrow {
+    0%{
+        opacity: 0;
+        transform: translateY(0vh);
+    }50%{
+        transform: translateY(1.5vh);
+        opacity: 1;
+    }100%{
+        opacity: 0;
+        transform: translateY(3vh);
+    }
+}
+
+@keyframes jump {
+    50%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: translateY(0.5vh);
+        transform: rotateY(180deg);
+        transform: scale(1.5);
+    }
+}
+
+@keyframes moreClear {
+    0%{
+        filter: blur(10px);
+    }100%{
+        filter: blur(0px);
+    }
+}
+
+#all{
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    height: 100vh;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+    section{
+        scroll-snap-align: start;
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+        padding-right: 13vw;
+        padding-left: 8vw;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $biruTua;
+}
+
+body{
+    user-select: none;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: $biruMuda;
+    color: $biruTua;
+    font-family: primary;
+    cursor: default;
+
+    #sideBar{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 5vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0.2;
+        transition: 0.3s;
+        &:hover{
+            opacity: 1;
+        }
+        a{
+            background-color: $biruTua;
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-left: 1px solid $biruTua;
+            &:hover{
+                background-color: rgba(0,0,0,0);
+                border: none;
+            }
+        }
+        img{
+            width: 4vw;
+        }
+    }
+
+    #home{
+        nav{
+            display: flex;
+            justify-content: space-between;
+            a{
+                text-align: center;
+                cursor: pointer;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.5);
+                    color: white;
+                }
+            }
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            h4{
+                z-index: 5;
+            }
+            h1{
+                text-align: center;
+                animation: bigger 0.6s ease-in-out;
+                transform: scale(1);
+            }
+            button{
+                background-color: $biruSedang;
+                font-weight: lighter;
+                border-radius: 10px;
+                width: 30vw;
+                border: 1px solid $biruTua;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                    color: white
+                }
+            }
+            div{
+                margin-top: -0.5vh;
+                z-index: -1;
+                display: flex;
+                flex-direction: column;
+                img{
+                    margin-bottom: -0.5vh;
+                    width: 4vw;
+                    aspect-ratio: 1;
+                    animation: movingArrow 2s infinite;
+                }
+            }
+        }
+    }
+
+    #aboutMe{
+        background-color: $biruSedang;
+        h3{
+            text-align: center;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            justify-content: space-around;
+            align-items: center;
+            #profile{
+                width: 50vw;
+                height: auto;
+            }
+            #aboutMeText{
+                width: 100%;
+                h2{
+                    text-align: center;
+                }
+                p{
+                    font-weight: normal;
+                    text-align: center;
+                }
+                #logo{
+                    display: flex;
+                    justify-content: space-between;
+                    img{
+                        width: 10vw;
+                        &:hover{
+                            animation: jump 1s linear;
+                            transform: scale(1.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #portofolio{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        #bgTemp{
+            background-color: rgba(0,0,0,0.8);
+            position: absolute;
+            display: none;
+            height: 100vh;
+            width: 100vw;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+        }
+        #bg{
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            top: 0px;
+            left: 0px;
+            display: none;
+            #realImage{
+                width: 70vw;
+                z-index: 3;
+                animation: 0.3s moreClear ;
+            }
+            .arrow{
+                z-index: 3;
+                width: 8vw;
+                margin: 4vw;
+                padding: 0.5vw;
+                background-color: $biruMuda;
+                border-radius: 50%;
+                transition: 0.3s;
+                &:hover{
+                    background-color: $biruSedang;
+                }
+            }
+            .prev{
+                transform: rotate(90deg);
+            }
+            .next{
+                transform: rotate(-90deg);
+            }
+        }
+        #title{
+            text-align: center;
+        }
+        main{
+            h3{
+                margin: 0px !important;
+            }
+            #certificates-wrapper{
+                margin-bottom: 3vh;
+                #certificates{
+                    background-color: $biruTua;
+                    padding: 1vw;
+                    border-radius: 10px;
+                    margin-block: 1vw;
+                    img{
+                        padding: 2vw;
+                        transition: 0.3s;
+                        &:hover{
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            #experience{
+                display: flex;
+                align-items: center;
+                #experience-wrapper{
+                    overflow: auto;
+                    &::-webkit-scrollbar {
+                        height: 10px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: #f1f1f1;
+                        border-radius: 10px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: $biruSedang;
+                        border-radius: 10px;
+                    }
+                    #experienceAll{
+                        display: flex;
+                        justify-content: space-between;
+                        width: calc(70vw*5);
+                        transition: 0.5s;
+                        padding-bottom: 2vh;
+                        .experienceText{
+                            width: 60vw;
+                            border-radius: 10px;
+                            background-color: $biruSedang;
+                            padding-inline: 5vw;
+                            display: flex;
+                            align-items: center;
+                            transition: 0.5s;
+                            &:hover{
+                                background-color: $biruTua;
+                                color: white;
+                            }
+                            img{
+                                aspect-ratio: 1;
+                                width: 15vw;
+                                margin-right: 1vw;
+                                border-radius: 10px;
+                            }
+                            .experienceTextJob{
+                                h3{
+                                    margin: 0px;
+                                }
+                                h5{
+                                    margin: 0px;
+                                    font-family: secondary;
+                                }
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                li{
+                                    margin: 0px;
+                                    padding: 0px;   
+                                    font-family: secondary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #contactUs{
+        background-color: $biruSedang;
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            form{
+                transition: 0.3s;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: $biruMuda;
+                padding: 1vw;
+                border-radius: 10px;
+                #phone{
+                    &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    }
+                }
+                input, textarea{
+                    border: 1px solid $biruSedang;
+                    letter-spacing: 1px;
+                    font-family: secondary;
+                    transition: 0.5s;
+                    &:focus{
+                        box-shadow: 5px 5px $biruTua;
+                        border: 1px solid $biruTua;
+                    }
+                }
+                .wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    .form-text{
+                        color: red;
+                        font-family: secondary;
+                        margin: 0px;
+                        text-align: right;
+                    }
+                }
+                #submit-wrapper{
+                    display: flex;
+                    justify-content: flex-end;
+                    button{
+                        background-color: $biruSedang;
+                        color: $biruTua;
+                        border: none;
+                        padding-block: 0.5vw;
+                        padding-inline: 2.5vw;
+                        transition: 0.5s;
+                        box-shadow: none;
+                        &:hover{
+                            background-color: $biruTua;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            #socialMedia-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .socialMedia{
+                display: flex;
+                border-radius: 10px;
+                transition: 0.5s;
+                .socialMediaText{
+                    display: none;
+                }
+                &:hover{
+                    background-color: $biruMuda;
+                    img{
+                        background-color: $biruTua;
+                    }
+                }
+                img{
+                    transition: all 0.3s;
+                    width: 15vw;
+                    padding: 3vw;
+                    border-radius: 10px;
+                    aspect-ratio: 1;
+                    margin-right: 1vw;
+                    background-color: $biruMuda;
+                }
+                span{
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
