@@ -325,6 +325,8 @@ body #aboutMe main {
 body #aboutMe main #profile {
   width: 50vw;
   height: auto;
+  border-radius: 10px;
+  border: 2px solid rgb(2, 48, 71);
 }
 body #aboutMe main #aboutMeText {
   width: 100%;
