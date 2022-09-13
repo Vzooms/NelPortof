@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Nelsen = './img/nelsen.jpg';
+const Nelsen = './img/nelsen.png';
 const HTML = './img/logo/HTML.png'
 const CSS = './img/logo//CSS.png'
 const JS = './img/logo/JS.png'
